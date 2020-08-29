@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0245CB3-C27F-485C-9B68-BCAC7EE9980E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRM_DTO</RootNamespace>
+    <AssemblyName>CRM_DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRMFunctions\FuncCalculate.cs" />
+    <Compile Include="CRMFunctions\FuncDataset.cs" />
+    <Compile Include="CRMFunctions\FuncEncryption.cs" />
+    <Compile Include="CRMFunctions\FuncException.cs" />
+    <Compile Include="CRMFunctions\FuncNumber.cs" />
+    <Compile Include="CRMFunctions\FuncReport.cs" />
+    <Compile Include="CRMFunctions\FuncXML.cs" />
+    <Compile Include="CRMUtility\MessagesText.cs" />
+    <Compile Include="DTOCategories\DTOCatCounter.cs" />
+    <Compile Include="DTOCategories\DTOCatCurrency.cs" />
+    <Compile Include="DTOCategories\DTOCatCustomer.cs" />
+    <Compile Include="DTOCategories\DTOCatCustomerGroup.cs" />
+    <Compile Include="DTOCategories\DTOCatCustomerType.cs" />
+    <Compile Include="DTOCategories\DTOCatEmployee.cs" />
+    <Compile Include="DTOCategories\DTOCatProduct.cs" />
+    <Compile Include="DTOCategories\DTOCatProductGroup.cs" />
+    <Compile Include="DTOCategories\DTOCatProductType.cs" />
+    <Compile Include="DTOCategories\DTOCatShop.cs" />
+    <Compile Include="DTOCategories\DTOCatStalls.cs" />
+    <Compile Include="DTOCategories\DTOCatSupplier.cs" />
+    <Compile Include="DTOCategories\DTOCatUnitIn.cs" />
+    <Compile Include="DTOCategories\DTOCatUnitSell.cs" />
+    <Compile Include="DTOCategories\DTOCatUnitWeight.cs" />
+    <Compile Include="DTOCategories\DTOCatUserGroup.cs" />
+    <Compile Include="DTOCounter\DTOCatCounterLog.cs" />
+    <Compile Include="DTOCounter\DTOTrnCounterInOut.cs" />
+    <Compile Include="DTOCounter\DTOTrnCounterInOutDT.cs" />
+    <Compile Include="DTOCounter\DTOTrnCounterTransfer.cs" />
+    <Compile Include="DTOCounter\DTOTrnCounterTransferDT.cs" />
+    <Compile Include="DTOProduct\DTOProduct.cs" />
+    <Compile Include="DTOProduct\DTOTrnProductInDT.cs" />
+    <Compile Include="DTOProduct\DTOTrnProductOut.cs" />
+    <Compile Include="DTOProduct\DTOTrnProductIn.cs" />
+    <Compile Include="DTOProduct\DTOTrnProductOutDT.cs" />
+    <Compile Include="DTOProduct\DTOTrnProductSell.cs" />
+    <Compile Include="DTOProduct\DTOTrnProductSellDT.cs" />
+    <Compile Include="DTOProduct\DTOTrnProductTransfer.cs" />
+    <Compile Include="DTOProduct\DTOTrnProductTransferDT.cs" />
+    <Compile Include="DTOSystem\DTOAttributeSystem.cs" />
+    <Compile Include="DTOSystem\DTOSysMenus.cs" />
+    <Compile Include="DTOSystem\DTOSysProductRate.cs" />
+    <Compile Include="DTOSystem\DTOSysRights.cs" />
+    <Compile Include="DTOSystem\DTOSysUsers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CRMConfig\clsDatabase.cs" />
+    <Compile Include="CRMConfig\clsKeyValue.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

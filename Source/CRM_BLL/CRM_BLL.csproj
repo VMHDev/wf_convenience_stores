@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{738D6029-8565-4355-85AF-AEEC75951FAE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRM_BLL</RootNamespace>
+    <AssemblyName>CRM_BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLLCategories\BLLCatCounter.cs" />
+    <Compile Include="BLLCategories\BLLCatCurrency.cs" />
+    <Compile Include="BLLCategories\BLLCatCustomer.cs" />
+    <Compile Include="BLLCategories\BLLCatCustomerGroup.cs" />
+    <Compile Include="BLLCategories\BLLCatCustomerType.cs" />
+    <Compile Include="BLLCategories\BLLCatEmployee.cs" />
+    <Compile Include="BLLCategories\BLLCatProduct.cs" />
+    <Compile Include="BLLCategories\BLLCatProductGroup.cs" />
+    <Compile Include="BLLCategories\BLLCatProductType.cs" />
+    <Compile Include="BLLCategories\BLLCatShop.cs" />
+    <Compile Include="BLLCategories\BLLCatStalls.cs" />
+    <Compile Include="BLLCategories\BLLCatSupplier.cs" />
+    <Compile Include="BLLCategories\BLLCatUnitIn.cs" />
+    <Compile Include="BLLCategories\BLLCatUnitSell.cs" />
+    <Compile Include="BLLCategories\BLLCatUnitWeight.cs" />
+    <Compile Include="BLLCategories\BLLCatUserGroup.cs" />
+    <Compile Include="BLLCounter\BLLCounterOpenClose.cs" />
+    <Compile Include="BLLCounter\BLLTrnCounterInOut.cs" />
+    <Compile Include="BLLCounter\BLLTrnCounterTransfer.cs" />
+    <Compile Include="BLLProduct\BLLProduct.cs" />
+    <Compile Include="BLLProduct\BLLTrnProductIn.cs" />
+    <Compile Include="BLLProduct\BLLTrnProductOut.cs" />
+    <Compile Include="BLLProduct\BLLTrnProductSell.cs" />
+    <Compile Include="BLLProduct\BLLTrnProductTransfer.cs" />
+    <Compile Include="BLLSystem\BLLAttributeSystem.cs" />
+    <Compile Include="BLLSystem\BLLSysCounterStock.cs" />
+    <Compile Include="BLLSystem\BLLSysGenCode.cs" />
+    <Compile Include="BLLSystem\BLLSysMenus.cs" />
+    <Compile Include="BLLSystem\BLLSysProductStock.cs" />
+    <Compile Include="BLLSystem\BLLSysRights.cs" />
+    <Compile Include="BLLSystem\BLLSysStatus.cs" />
+    <Compile Include="BLLSystem\BLLSysUsers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRM_DAL\CRM_DAL.csproj">
+      <Project>{74e8f94f-2f8e-45f9-91c4-340f17da2f6a}</Project>
+      <Name>CRM_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRM_DTO\CRM_DTO.csproj">
+      <Project>{c0245cb3-c27f-485c-9b68-bcac7ee9980e}</Project>
+      <Name>CRM_DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
