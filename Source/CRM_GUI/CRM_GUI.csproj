@@ -1,0 +1,823 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5CB8985-7A7C-4A94-B43F-5E96BF3F6432}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRM_GUI</RootNamespace>
+    <AssemblyName>CRM_GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.BonusSkins.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.CodeParser.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Data.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.DataAccess.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Images.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Printing.v15.1.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Utils.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraBars.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraEditors.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraGrid.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraLayout.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraNavBar.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraPrinting.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraTreeList.v15.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRMFunctions\FuncDataSet.cs" />
+    <Compile Include="CRMFunctions\FuncDropDownList.cs" />
+    <Compile Include="CRMFunctions\FuncGeneral.cs" />
+    <Compile Include="CRMFunctions\FuncReportGUI.cs" />
+    <Compile Include="CRMFunctions\FuncSkin.cs" />
+    <Compile Include="CRMUtility\Messages\frmVMHMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRMUtility\Messages\frmVMHMessages.Designer.cs">
+      <DependentUpon>frmVMHMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMUtility\Messages\frmVMHPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRMUtility\Messages\frmVMHPopup.Designer.cs">
+      <DependentUpon>frmVMHPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMUtility\Messages\VMHMessages.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerType.Designer.cs">
+      <DependentUpon>frmCustomerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerTypeUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerTypeUdp.Designer.cs">
+      <DependentUpon>frmCustomerTypeUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerUdp.Designer.cs">
+      <DependentUpon>frmCustomerUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerGroup.Designer.cs">
+      <DependentUpon>frmCustomerGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerGroupUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCustomerGroupUdp.Designer.cs">
+      <DependentUpon>frmCustomerGroupUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCounter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCounter.Designer.cs">
+      <DependentUpon>frmCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmEmployeeUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmEmployeeUdp.Designer.cs">
+      <DependentUpon>frmEmployeeUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmProductCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmProductCat.Designer.cs">
+      <DependentUpon>frmProductCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmProductGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmProductGroup.Designer.cs">
+      <DependentUpon>frmProductGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmProductCatUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmProductCatUdp.Designer.cs">
+      <DependentUpon>frmProductCatUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmProductGroupUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmProductGroupUdp.Designer.cs">
+      <DependentUpon>frmProductGroupUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmProductType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmProductType.Designer.cs">
+      <DependentUpon>frmProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmProductTypeUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmProductTypeUdp.Designer.cs">
+      <DependentUpon>frmProductTypeUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmShop.Designer.cs">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmShopUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmShopUdp.Designer.cs">
+      <DependentUpon>frmShopUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmStalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmStalls.Designer.cs">
+      <DependentUpon>frmStalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCounterUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCounterUdp.Designer.cs">
+      <DependentUpon>frmCounterUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmStallsUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmStallsUdp.Designer.cs">
+      <DependentUpon>frmStallsUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmSupplierUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmSupplierUdp.Designer.cs">
+      <DependentUpon>frmSupplierUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCurrency.Designer.cs">
+      <DependentUpon>frmCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmCurrencyUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmCurrencyUdp.Designer.cs">
+      <DependentUpon>frmCurrencyUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitWeight.Designer.cs">
+      <DependentUpon>frmUnitWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitWeightUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitWeightUdp.Designer.cs">
+      <DependentUpon>frmUnitWeightUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitSell.Designer.cs">
+      <DependentUpon>frmUnitSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitSellUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitSellUdp.Designer.cs">
+      <DependentUpon>frmUnitSellUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitIn.Designer.cs">
+      <DependentUpon>frmUnitIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitInUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICategories\frmUnitInUdp.Designer.cs">
+      <DependentUpon>frmUnitInUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterInOut.Designer.cs">
+      <DependentUpon>frmCounterInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterInOutDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterInOutDtl.Designer.cs">
+      <DependentUpon>frmCounterInOutDtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterTransfer.Designer.cs">
+      <DependentUpon>frmCounterTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterOpenClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterOpenClose.Designer.cs">
+      <DependentUpon>frmCounterOpenClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterInOutLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterInOutLst.Designer.cs">
+      <DependentUpon>frmCounterInOutLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterTransferLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUICounter\frmCounterTransferLst.Designer.cs">
+      <DependentUpon>frmCounterTransferLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductInDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductInDtl.Designer.cs">
+      <DependentUpon>frmProductInDtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductIn.Designer.cs">
+      <DependentUpon>frmProductIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductOutDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductOutDtl.Designer.cs">
+      <DependentUpon>frmProductOutDtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductTransfer.Designer.cs">
+      <DependentUpon>frmProductTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductOut.Designer.cs">
+      <DependentUpon>frmProductOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductSell.Designer.cs">
+      <DependentUpon>frmProductSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductSellDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductSellDtl.Designer.cs">
+      <DependentUpon>frmProductSellDtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductInLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductInLst.Designer.cs">
+      <DependentUpon>frmProductInLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductOutLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductOutLst.Designer.cs">
+      <DependentUpon>frmProductOutLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductTransferLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductTransferLst.Designer.cs">
+      <DependentUpon>frmProductTransferLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductSellLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductSellLst.Designer.cs">
+      <DependentUpon>frmProductSellLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductUpdateRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIProduct\frmProductUpdateRate.Designer.cs">
+      <DependentUpon>frmProductUpdateRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIQuery\frmQueryProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIQuery\frmQueryProduct.Designer.cs">
+      <DependentUpon>frmQueryProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIQuery\frmQueryInStockCounter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIQuery\frmQueryInStockCounter.Designer.cs">
+      <DependentUpon>frmQueryInStockCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIQuery\frmQueryTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIQuery\frmQueryTransaction.Designer.cs">
+      <DependentUpon>frmQueryTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIReport\frmViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIReport\frmViewReport.Designer.cs">
+      <DependentUpon>frmViewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIReport\Report\DataSetReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUIReport\Report\TRN_PRODUCT_SELL_PrintBill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TRN_PRODUCT_SELL_PrintBill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUIReport\Report\TRN_PRODUCT_SELL_PrintBill_SubDT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TRN_PRODUCT_SELL_PrintBill_SubDT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUISystem\frmAccessRights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUISystem\frmAccessRights.Designer.cs">
+      <DependentUpon>frmAccessRights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUISystem\User\frmPasswordReset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUISystem\User\frmPasswordReset.Designer.cs">
+      <DependentUpon>frmPasswordReset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUISystem\User\frmAccountBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUISystem\User\frmAccountBlock.Designer.cs">
+      <DependentUpon>frmAccountBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUISystem\User\frmAccountUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUISystem\User\frmAccountUpdate.Designer.cs">
+      <DependentUpon>frmAccountUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUISystem\User\frmPasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUISystem\User\frmPasswordChange.Designer.cs">
+      <DependentUpon>frmPasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUITemplate\frmTemplateLookUpEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUITemplate\frmTemplateLookUpEdit.Designer.cs">
+      <DependentUpon>frmTemplateLookUpEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUITemplate\frmTemplateCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUITemplate\frmTemplateCategories.Designer.cs">
+      <DependentUpon>frmTemplateCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUITemplate\frmTemplateCategoriesUdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUITemplate\frmTemplateCategoriesUdp.Designer.cs">
+      <DependentUpon>frmTemplateCategoriesUdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIUserControl\ucCatProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIUserControl\ucCatProduct.Designer.cs">
+      <DependentUpon>ucCatProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIUserControl\ucPictureEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIUserControl\ucPictureEdit.Designer.cs">
+      <DependentUpon>ucPictureEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GUISystem\Database\frmConfigDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUISystem\Database\frmConfigDatabase.Designer.cs">
+      <DependentUpon>frmConfigDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUISystem\User\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUISystem\User\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CRMUtility\Messages\frmVMHMessages.resx">
+      <DependentUpon>frmVMHMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRMUtility\Messages\frmVMHPopup.resx">
+      <DependentUpon>frmVMHPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCustomerType.resx">
+      <DependentUpon>frmCustomerType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCustomerTypeUdp.resx">
+      <DependentUpon>frmCustomerTypeUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCustomerUdp.resx">
+      <DependentUpon>frmCustomerUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCustomerGroup.resx">
+      <DependentUpon>frmCustomerGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCustomerGroupUdp.resx">
+      <DependentUpon>frmCustomerGroupUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCounter.resx">
+      <DependentUpon>frmCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmEmployeeUdp.resx">
+      <DependentUpon>frmEmployeeUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmProductCat.resx">
+      <DependentUpon>frmProductCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmProductGroup.resx">
+      <DependentUpon>frmProductGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmProductCatUdp.resx">
+      <DependentUpon>frmProductCatUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmProductGroupUdp.resx">
+      <DependentUpon>frmProductGroupUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmProductType.resx">
+      <DependentUpon>frmProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmProductTypeUdp.resx">
+      <DependentUpon>frmProductTypeUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmShop.resx">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmShopUdp.resx">
+      <DependentUpon>frmShopUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmStalls.resx">
+      <DependentUpon>frmStalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCounterUdp.resx">
+      <DependentUpon>frmCounterUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmStallsUdp.resx">
+      <DependentUpon>frmStallsUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmSupplierUdp.resx">
+      <DependentUpon>frmSupplierUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCurrency.resx">
+      <DependentUpon>frmCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmCurrencyUdp.resx">
+      <DependentUpon>frmCurrencyUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmUnitWeight.resx">
+      <DependentUpon>frmUnitWeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmUnitWeightUdp.resx">
+      <DependentUpon>frmUnitWeightUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmUnitSell.resx">
+      <DependentUpon>frmUnitSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmUnitSellUdp.resx">
+      <DependentUpon>frmUnitSellUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmUnitIn.resx">
+      <DependentUpon>frmUnitIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICategories\frmUnitInUdp.resx">
+      <DependentUpon>frmUnitInUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICounter\frmCounterInOut.resx">
+      <DependentUpon>frmCounterInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICounter\frmCounterInOutDtl.resx">
+      <DependentUpon>frmCounterInOutDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICounter\frmCounterTransfer.resx">
+      <DependentUpon>frmCounterTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICounter\frmCounterOpenClose.resx">
+      <DependentUpon>frmCounterOpenClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICounter\frmCounterInOutLst.resx">
+      <DependentUpon>frmCounterInOutLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUICounter\frmCounterTransferLst.resx">
+      <DependentUpon>frmCounterTransferLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductInDtl.resx">
+      <DependentUpon>frmProductInDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductIn.resx">
+      <DependentUpon>frmProductIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductOutDtl.resx">
+      <DependentUpon>frmProductOutDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductTransfer.resx">
+      <DependentUpon>frmProductTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductOut.resx">
+      <DependentUpon>frmProductOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductSell.resx">
+      <DependentUpon>frmProductSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductSellDtl.resx">
+      <DependentUpon>frmProductSellDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductInLst.resx">
+      <DependentUpon>frmProductInLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductOutLst.resx">
+      <DependentUpon>frmProductOutLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductTransferLst.resx">
+      <DependentUpon>frmProductTransferLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductSellLst.resx">
+      <DependentUpon>frmProductSellLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIProduct\frmProductUpdateRate.resx">
+      <DependentUpon>frmProductUpdateRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIQuery\frmQueryProduct.resx">
+      <DependentUpon>frmQueryProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIQuery\frmQueryInStockCounter.resx">
+      <DependentUpon>frmQueryInStockCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIQuery\frmQueryTransaction.resx">
+      <DependentUpon>frmQueryTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIReport\frmViewReport.resx">
+      <DependentUpon>frmViewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIReport\Report\TRN_PRODUCT_SELL_PrintBill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TRN_PRODUCT_SELL_PrintBill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIReport\Report\TRN_PRODUCT_SELL_PrintBill_SubDT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TRN_PRODUCT_SELL_PrintBill_SubDT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUISystem\frmAccessRights.resx">
+      <DependentUpon>frmAccessRights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUISystem\User\frmPasswordReset.resx">
+      <DependentUpon>frmPasswordReset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUISystem\User\frmAccountBlock.resx">
+      <DependentUpon>frmAccountBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUISystem\User\frmAccountUpdate.resx">
+      <DependentUpon>frmAccountUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUISystem\User\frmPasswordChange.resx">
+      <DependentUpon>frmPasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUITemplate\frmTemplateLookUpEdit.resx">
+      <DependentUpon>frmTemplateLookUpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUITemplate\frmTemplateCategories.resx">
+      <DependentUpon>frmTemplateCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUITemplate\frmTemplateCategoriesUdp.resx">
+      <DependentUpon>frmTemplateCategoriesUdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIUserControl\ucCatProduct.resx">
+      <DependentUpon>ucCatProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIUserControl\ucPictureEdit.resx">
+      <DependentUpon>ucPictureEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="GUISystem\Database\frmConfigDatabase.resx">
+      <DependentUpon>frmConfigDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUISystem\User\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GUIReport\Report\DataSetReport.xsc">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+    <None Include="GUIReport\Report\DataSetReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUIReport\Report\DataSetReport.xss">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRM_BLL\CRM_BLL.csproj">
+      <Project>{738d6029-8565-4355-85af-aeec75951fae}</Project>
+      <Name>CRM_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRM_DTO\CRM_DTO.csproj">
+      <Project>{c0245cb3-c27f-485c-9b68-bcac7ee9980e}</Project>
+      <Name>CRM_DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\config.xml" />
+    <Content Include="bin\Release\config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
