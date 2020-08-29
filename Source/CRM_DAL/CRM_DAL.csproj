@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74E8F94F-2F8E-45F9-91C4-340F17DA2F6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRM_DAL</RootNamespace>
+    <AssemblyName>CRM_DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRMFunctions\Database\FuncDatabaseConnect.cs" />
+    <Compile Include="CRMFunctions\Database\FuncDatabaseExecute.cs" />
+    <Compile Include="DALCategories\DALCatCounter.cs" />
+    <Compile Include="DALCategories\DALCatCurrency.cs" />
+    <Compile Include="DALCategories\DALCatCustomer.cs" />
+    <Compile Include="DALCategories\DALCatCustomerGroup.cs" />
+    <Compile Include="DALCategories\DALCatCustomerType.cs" />
+    <Compile Include="DALCategories\DALCatEmployee.cs" />
+    <Compile Include="DALCategories\DALCatProduct.cs" />
+    <Compile Include="DALCategories\DALCatProductGroup.cs" />
+    <Compile Include="DALCategories\DALCatProductType.cs" />
+    <Compile Include="DALCategories\DALCatShop.cs" />
+    <Compile Include="DALCategories\DALCatStalls.cs" />
+    <Compile Include="DALCategories\DALCatSupplier.cs" />
+    <Compile Include="DALCategories\DALCatUnitIn.cs" />
+    <Compile Include="DALCategories\DALCatUnitSell.cs" />
+    <Compile Include="DALCategories\DALCatUnitWeight.cs" />
+    <Compile Include="DALCategories\DALCatUserGroup.cs" />
+    <Compile Include="DALCounter\DALCounterOpenClose.cs" />
+    <Compile Include="DALCounter\DALTrnCounterInOut.cs" />
+    <Compile Include="DALCounter\DALTrnCounterTransfer.cs" />
+    <Compile Include="DALProduct\DALProduct.cs" />
+    <Compile Include="DALProduct\DALTrnProductIn.cs" />
+    <Compile Include="DALProduct\DALTrnProductOut.cs" />
+    <Compile Include="DALProduct\DALTrnProductSell.cs" />
+    <Compile Include="DALProduct\DALTrnProductTransfer.cs" />
+    <Compile Include="DALSystem\DALAttributeSystem.cs" />
+    <Compile Include="DALSystem\DALSysGenCode.cs" />
+    <Compile Include="DALSystem\DALSysMenus.cs" />
+    <Compile Include="DALSystem\DALSysProductStock.cs" />
+    <Compile Include="DALSystem\DALSysRights.cs" />
+    <Compile Include="DALSystem\DALSysStatus.cs" />
+    <Compile Include="DALSystem\DALSysUsers.cs" />
+    <Compile Include="DALSystem\DALSysCounterStock.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRM_DTO\CRM_DTO.csproj">
+      <Project>{c0245cb3-c27f-485c-9b68-bcac7ee9980e}</Project>
+      <Name>CRM_DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

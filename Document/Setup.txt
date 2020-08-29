@@ -1,0 +1,10 @@
+Đồ án phát triển trên:
+	- .Net Framework 4.8
+	- SQL Server 2017
+	- DevExpress 15.6
+	- Crystal Report 13.0.12
+Để chạy được chương trình vui lòng cài Crystal Report 13.0.12 từ các link sau:
+	http://downloads.i-theses.com/index.php?option=com_downloads&task=downloads&groupid=9&id=101
+	https://drive.google.com/open?id=1yvGM7rfK0FbA9JEZPvTSM5wSMtmPhFGI 
+	
+Ngoài ra còn cần tiến hành restore database lên SQL Server 2017
